@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS hourly (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  hourlyDate date,
+  hourlySkyConditions varchar(45),
+  hourlyVisibility double(10,2),
+  hourlyDryBulbTemp tinyint,
+  hourlyRelativeHumidity smallint,
+  hourlyWindSpeed smallint,
+  hourlyWindGustSpeed smallint,
+  hourlyStationPressure double(10,2),
+  PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS dailyAvg (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  dailyAvgDryBulbTemp tinyint,
+  dailyAvgRelativeHumidity smallint,
+  dailyAvgWindSpeed smallint,
+  dailyAvgStationPressure double(10,2),
+  PRIMARY KEY (id)
+);
